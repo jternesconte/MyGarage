@@ -1,7 +1,8 @@
-export interface Car {
+export interface CarInterface {
    id: string;
    title: string;
-   type: string;
+   category: string;
+   image: File;
    km: number;
    engine: string;
    color: string;
