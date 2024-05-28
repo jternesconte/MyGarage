@@ -1,0 +1,14 @@
+.list-container {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+}
+
+.action-container {
+   display: flex;
+   justify-content: center;
+}
+
+.car-container {
+   display: flex;
+}
