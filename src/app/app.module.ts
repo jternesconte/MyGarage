@@ -10,30 +10,34 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { RouterOutlet } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-
+import { ListComponent } from './features/list/list.component';
+import { CardComponent } from "./features/list/card/card.component";
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    AppRoutingModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatCardModule,
-    RouterOutlet
-  ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        ListComponent
+    ],
+    providers: [
+        provideAnimationsAsync()
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        AppRoutingModule,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatCardModule,
+        RouterOutlet,
+        CardComponent
+    ]
 })
 export class AppModule { }
