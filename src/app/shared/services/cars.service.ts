@@ -6,11 +6,12 @@ import { CarInterface } from '../interfaces/car';
   providedIn: 'root'
 })
 export class CarsService {
-  private apiUrl = 'http://localhost:3000/cars'
-
   constructor(private http: HttpClient) { }
 
-  getAll() {
-    return this.http.get<CarInterface[]>(this.apiUrl);
+  private apiUrl = 'http://localhost:3000/cars'
+
+
+  getCarData() {
+    return this.http.get<CarInterface>(this.apiUrl);
   }
 }

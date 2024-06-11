@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ListComponent } from './features/list/list.component';
 import { CardComponent } from "./features/list/card/card.component";
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -22,7 +23,8 @@ import { CardComponent } from "./features/list/card/card.component";
     declarations: [
         AppComponent,
         HeaderComponent,
-        ListComponent
+        ListComponent,
+        CardComponent
     ],
     providers: [
         provideAnimationsAsync()
@@ -31,13 +33,19 @@ import { CardComponent } from "./features/list/card/card.component";
     imports: [
         BrowserModule,
         CommonModule,
+        NgIf,
         AppRoutingModule,
         MatIconModule,
         MatButtonModule,
         MatToolbarModule,
         MatCardModule,
         RouterOutlet,
-        CardComponent
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        HttpClientModule
+
     ]
 })
 export class AppModule { }
