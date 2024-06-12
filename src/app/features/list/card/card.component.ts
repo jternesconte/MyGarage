@@ -9,14 +9,14 @@ import { CarsService } from '../../../shared/services/cars.service';
   styleUrl: './card.component.css',
 })
 export class CardComponent implements OnInit {
-  car: CarInterface | null = null;
+  cars: CarInterface[] = [];
 
   constructor(private carService: CarsService) {}
 
   ngOnInit() {
     this.carService.getCarData()
-      .subscribe(car => this.car = car);
-      console.log(this.car)
+      .subscribe(cars => this.cars = cars);
+      console.log(this.cars);
   }
 
 }

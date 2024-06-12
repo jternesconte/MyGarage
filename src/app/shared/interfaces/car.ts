@@ -6,4 +6,6 @@ export interface CarInterface {
    km: string;
    engine: string;
    color: string;
+   year: string;
+   condition: string;
 }
