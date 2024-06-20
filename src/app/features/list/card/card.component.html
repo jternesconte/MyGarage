@@ -1,20 +1,20 @@
-<div class="flex w-80">
+<div class="px-8 gap-4 justify-center grid grid-cols-4">
   <mat-card *ngFor="let car of cars">
-    <img mat-card-image [src]="'/' + car.image" alt="car image">
-    <mat-card-title>{{car.title}}</mat-card-title>
-    <mat-card-subtitle>{{car.condition}}</mat-card-subtitle>
+    <img mat-card-image [src]="car.image" alt="car image">
+    <mat-card-title>R${{car.price}}</mat-card-title>
+    <mat-card-subtitle>{{car.title}} {{car.engine}}</mat-card-subtitle>
     <mat-card-content>
       <p>
-        Year: {{car.year}} | KM: {{car.km}} | Engine: {{car.engine}}
+        {{car.year}} | {{car.km}}km
       </p>
     </mat-card-content>
     <mat-card-content>
       <p>
-        Category: {{car.category}} | Color: {{car.color}}
+        {{car.color}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
+      <button mat-raised-button color="primary">Infos</button>
     </mat-card-actions>
   </mat-card>
 </div>

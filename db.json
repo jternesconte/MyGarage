@@ -4,12 +4,97 @@
       "id": "1",
       "title": "Gol",
       "category": "Hatch",
-      "image": "assets/images/rs6.jpg",
+      "image": "assets/images/golG3.jpg",
       "km": "100.000",
       "engine": "1.0",
-      "color": "Black",
+      "color": "Silver",
       "year": "2003",
-      "condition": "Used"
+      "condition": "Used",
+      "price": "13.000"
+    },
+    {
+      "id": "2",
+      "title": "Fiesta",
+      "category": "Hatch",
+      "image": "assets/images/fiesta.jpeg",
+      "km": "152.000",
+      "engine": "1.6",
+      "color": "Black",
+      "year": "2008",
+      "condition": "Used",
+      "price": "22.000"
+    },
+    {
+      "id": "3",
+      "title": "Fiesta",
+      "category": "SUV",
+      "image": "assets/images/ecosport.jpeg",
+      "km": "85.700",
+      "engine": "1.6",
+      "color": "Silver",
+      "year": "2012",
+      "condition": "Used",
+      "price": "34.900"
+    },
+    {
+      "id": "4",
+      "title": "Jetta GLI",
+      "category": "Sedan",
+      "image": "assets/images/jetta2024.jpg",
+      "km": "152.000",
+      "engine": "1.6",
+      "color": "Black",
+      "year": "2024",
+      "condition": "Used",
+      "price": "239.800"
+    },
+    {
+      "id": "1",
+      "title": "Gol",
+      "category": "Hatch",
+      "image": "assets/images/golG3.jpg",
+      "km": "100.000",
+      "engine": "1.0",
+      "color": "Silver",
+      "year": "2003",
+      "condition": "Used",
+      "price": "13.000"
+    },
+    {
+      "id": "2",
+      "title": "Fiesta",
+      "category": "Hatch",
+      "image": "assets/images/fiesta.jpeg",
+      "km": "152.000",
+      "engine": "1.6",
+      "color": "Black",
+      "year": "2008",
+      "condition": "Used",
+      "price": "22.000"
+    },
+    {
+      "id": "3",
+      "title": "Fiesta",
+      "category": "SUV",
+      "image": "assets/images/ecosport.jpeg",
+      "km": "85.700",
+      "engine": "1.6",
+      "color": "Silver",
+      "year": "2012",
+      "condition": "Used",
+      "price": "34.900"
+    },
+    {
+      "id": "4",
+      "title": "Jetta GLI",
+      "category": "Sedan",
+      "image": "assets/images/jetta2024.jpg",
+      "km": "152.000",
+      "engine": "1.6",
+      "color": "Black",
+      "year": "2024",
+      "condition": "Used",
+      "price": "239.800"
     }
   ]
 }

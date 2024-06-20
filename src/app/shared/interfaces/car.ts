@@ -8,4 +8,5 @@ export interface CarInterface {
    color: string;
    year: string;
    condition: string;
+   price: string;
 }
