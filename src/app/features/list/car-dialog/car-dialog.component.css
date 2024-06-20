@@ -1,0 +1,24 @@
+.car-form {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+}
+ 
+.mat-form-field {
+   width: 100%;
+}
+ 
+.image-preview {
+   grid-column: span 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ 
+.image-preview img {
+   max-width: 100%;
+   height: auto;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   padding: 5px;
+}

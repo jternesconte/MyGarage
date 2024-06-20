@@ -14,9 +14,12 @@ export class CardComponent implements OnInit {
   constructor(private carService: CarsService) {}
 
   ngOnInit() {
+    this.getCars()
+  }
+
+  getCars() {
     this.carService.getCarData()
       .subscribe(cars => this.cars = cars);
-      console.log(this.cars);
   }
 
 }

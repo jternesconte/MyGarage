@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Add Car</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" class="car-form">
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="id" formControlName="id" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="title" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <input matInput placeholder="category" formControlName="category" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input type="file" placeholder="image" matInput (change)="onFileSelected($event)">
+    </mat-form-field>
+    <div class="image-preview">
+      <img *ngIf="imageSrc" [src]="imageSrc" alt="Image Preview">
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>KM</mat-label>
+      <input matInput placeholder="km" formControlName="km" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Engine</mat-label>
+      <input matInput placeholder="engine" formControlName="engine" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Color</mat-label>
+      <input matInput placeholder="color" formControlName="color" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Year</mat-label>
+      <input matInput placeholder="year" formControlName="year" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Condition</mat-label>
+      <input matInput placeholder="condition" formControlName="condition" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="price" formControlName="price" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button (click)="save()">Save</button>
+</div>
