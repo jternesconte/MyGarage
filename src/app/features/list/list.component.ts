@@ -27,19 +27,6 @@ export class ListComponent implements OnInit {
   }
 
   openDialog() {
-    const carInterface: CarInterface = {
-      id: '1',
-      title: 'Car Title',
-      category: 'SUV',
-      image: 'https://via.placeholder.com/150',
-      km: '10000 km',
-      engine: 'V8',
-      color: 'Blue',
-      year: '2023',
-      condition: 'Used',
-      price: '$30,000'
-    };
-
     const dialogRef = this.dialog.open(CarDialogComponent, {
       width: '600px',
       data: {} as CarInterface,
@@ -47,8 +34,7 @@ export class ListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        console.log('Dialog result:', result);
-        // Aqui você pode processar os dados retornados
+        this.cars.push(result);
       }
     });
   }

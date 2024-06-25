@@ -18,16 +18,16 @@ export class CarDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: CarInterface
   ) {
     this.form = this.formBuilder.group({
-      id: [data.id, Validators.required],
-      title: [data.title, Validators.required],
-      category: [data.category, Validators.required],
-      image: [data.image, Validators.required],
-      km: [data.km, Validators.required],
-      engine: [data.engine, Validators.required],
-      color: [data.color, Validators.required],
-      year: [data.year, Validators.required],
-      condition: [data.condition, Validators.required],
-      price: [data.price, Validators.required]
+      id: [data.id],
+      title: [data.title],
+      category: [data.category],
+      image: [data.image],
+      km: [data.km],
+      engine: [data.engine],
+      color: [data.color],
+      year: [data.year],
+      condition: [data.condition],
+      price: [data.price]
     });
     this.imageSrc = data.image;
   }
