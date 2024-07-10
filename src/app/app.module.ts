@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -14,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
  
 
 import { RouterOutlet } from '@angular/router';
@@ -21,9 +23,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ListComponent } from './features/list/list.component';
 import { CardComponent } from "./features/list/card/card.component";
-import { HttpClientModule } from '@angular/common/http';
 import { CarDialogComponent } from './features/list/car-dialog/car-dialog.component';
-
+import { CategoryChoiceComponent } from './features/category-choice/category-choice.component';
 
 
 @NgModule({
@@ -32,10 +33,12 @@ import { CarDialogComponent } from './features/list/car-dialog/car-dialog.compon
         HeaderComponent,
         ListComponent,
         CardComponent,
-        CarDialogComponent
+        CarDialogComponent,
+        CategoryChoiceComponent
     ],
     providers: [
-        provideAnimationsAsync()
+        provideAnimationsAsync(),
+        {provide: MatPaginatorIntl, useClass: ListComponent}
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -58,6 +61,7 @@ import { CarDialogComponent } from './features/list/car-dialog/car-dialog.compon
         MatFormFieldModule,
         MatInputModule,
         BrowserAnimationsModule,
+        MatPaginatorModule
 
     ]
 })

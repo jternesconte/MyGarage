@@ -2,7 +2,7 @@ export interface CarInterface {
    id: string;
    title: string;
    category: string;
-   image: string;
+   image: File;
    km: string;
    engine: string;
    color: string;

@@ -15,15 +15,11 @@ export class ListComponent implements OnInit {
   constructor(private carService: CarsService, private dialog: MatDialog) {}
 
   ngOnInit() {
-    this.getCars();
-  }
-
-  getCars() {
-    this.carService.getCarData().subscribe((cars) => (this.cars = cars));
+    
   }
 
   addCar(newCar: CarInterface) {
-    this.cars.push(newCar); // Adicione o novo carro à matriz local de carros
+    this.cars.push(newCar);
   }
 
   openDialog() {

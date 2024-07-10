@@ -29,7 +29,6 @@ export class CarDialogComponent {
       condition: [data.condition],
       price: [data.price]
     });
-    this.imageSrc = data.image;
   }
 
   onFileSelected(event: Event) {
