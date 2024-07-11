@@ -7,12 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CarsService {
-  saveCarData(cars: CarInterface[]) {
-    throw new Error('Method not implemented.');
-  }
-  getCars() {
-    throw new Error('Method not implemented.');
-  }
   constructor(private http: HttpClient) { }
 
   private apiUrl = 'http://localhost:3000/cars';
@@ -20,5 +14,9 @@ export class CarsService {
 
   getCarData(): Observable<CarInterface[]> {
     return this.http.get<CarInterface[]>(this.apiUrl);
+  }
+
+  saveCarData(cars: CarInterface[]) {
+    return this.http.post(this.apiUrl, cars)
   }
 }

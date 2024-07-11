@@ -24,7 +24,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { ListComponent } from './features/list/list.component';
 import { CardComponent } from "./features/list/card/card.component";
 import { CarDialogComponent } from './features/list/car-dialog/car-dialog.component';
-import { CategoryChoiceComponent } from './features/category-choice/category-choice.component';
 
 
 @NgModule({
@@ -33,12 +32,10 @@ import { CategoryChoiceComponent } from './features/category-choice/category-cho
         HeaderComponent,
         ListComponent,
         CardComponent,
-        CarDialogComponent,
-        CategoryChoiceComponent
+        CarDialogComponent
     ],
     providers: [
-        provideAnimationsAsync(),
-        {provide: MatPaginatorIntl, useClass: ListComponent}
+        provideAnimationsAsync()
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -61,7 +58,6 @@ import { CategoryChoiceComponent } from './features/category-choice/category-cho
         MatFormFieldModule,
         MatInputModule,
         BrowserAnimationsModule,
-        MatPaginatorModule
 
     ]
 })

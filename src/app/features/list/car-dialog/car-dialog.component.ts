@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { CarInterface } from '../../../shared/interfaces/car';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CarsService } from '../../../shared/services/cars.service';
 
 @Component({
   selector: 'app-car-dialog',
@@ -15,6 +16,7 @@ export class CarDialogComponent {
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<CarDialogComponent>,
+    private carService: CarsService,
     @Inject(MAT_DIALOG_DATA) public data: CarInterface
   ) {
     this.form = this.formBuilder.group({
@@ -46,7 +48,9 @@ export class CarDialogComponent {
 
   save() {
     if (this.form.valid) {
-      this.dialogRef.close(this.form.value);
+      this.carService.saveCarData(this.form.value).subscribe(response => {
+        this.dialogRef.close(response);
+      });
     }
   }
 
